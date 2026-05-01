@@ -6,7 +6,6 @@
 
 **Conducted by Hack2skill & PromptWars in collaboration with Google for Developers**
 
-\
 
 > **Google Services Challenge — Election Process Education**
 > A 100% free, AI-powered educational platform that helps Tamil Nadu and Indian citizens
