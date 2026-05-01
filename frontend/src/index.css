@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-navy-500 rounded;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans antialiased;
+  }
+
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-navy-800 text-white font-semibold rounded-xl
+           hover:bg-navy-700 active:scale-95 transition-all duration-150 shadow-md
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-500;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-white text-navy-800 font-semibold rounded-xl border-2 border-navy-200
+           hover:border-navy-400 hover:bg-navy-50 active:scale-95 transition-all duration-150 shadow-sm;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-slate-100 p-6
+           dark:bg-slate-900 dark:border-slate-800;
+  }
+
+  .section-title {
+    @apply font-display text-3xl md:text-4xl text-navy-900 dark:text-white;
+  }
+
+  .section-subtitle {
+    @apply text-slate-500 text-lg mt-2 dark:text-slate-400;
+  }
+}
+
+/* Typing dots animation */
+.typing-dots::after {
+  content: '';
+  animation: typing-dots 1.4s steps(4, end) infinite;
+}
+
+@keyframes typing-dots {
+  0%   { content: ''; }
+  25%  { content: '.'; }
+  50%  { content: '..'; }
+  75%  { content: '...'; }
+  100% { content: ''; }
+}
+
+/* Smooth scroll anchor offset for fixed header */
+[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Timeline connector line */
+.timeline-line {
+  background: linear-gradient(to bottom, #0022aa, #4d7bff);
+}
+
+/* Chat bubble tail */
+.bubble-user::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  bottom: 10px;
+  border: 8px solid transparent;
+  border-left-color: #0022aa;
+  border-right: 0;
+}
+
+.bubble-bot::after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  bottom: 10px;
+  border: 8px solid transparent;
+  border-right-color: white;
+  border-left: 0;
+}
+
+.dark .bubble-bot::after {
+  border-right-color: #1e293b;
+}
