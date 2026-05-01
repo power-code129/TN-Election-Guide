@@ -1,0 +1,64 @@
+# ── Python ────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+*.so
+.venv/
+venv/
+env/
+ENV/
+
+# Environment / Secrets — NEVER commit these
+.env
+.env.local
+.env.production
+.env.*.local
+# Keep the example file
+!.env.example
+
+# Test & coverage artefacts
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+pip-log.txt
+
+# ── Node / Frontend ────────────────────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.local
+
+# ── IDEs ───────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Google Cloud / Docker ──────────────────────────────────────────────────
+gcloud-service-key.json
+*.json.key
+service-account*.json
+
+# ── Misc ───────────────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+.cache/
+coverage/
